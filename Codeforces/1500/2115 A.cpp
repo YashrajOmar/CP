@@ -9,7 +9,7 @@ int gcd_table[MAXA][MAXA];
 void precompute_gcd() {
     for (int i = 0; i < MAXA; i++) {
         for (int j = 0; j < MAXA; j++) {
-            gcd_table[i][j] = __gcd(i, j);
+            gcd_table[i][j] = __gcd(i, j); // precomputed GCD table: g[x][y] = gcd(x, y)
         }
     }
 }
@@ -46,6 +46,7 @@ int main() {
         vector<int> f(MAXA, INT_MAX);
         for (int i = 0; i < n; i++) {
             f[a[i]] = 0;              ///min steps needed to raech make every value = a[i]
+                                //DP array storing minimum operations for each GCD state.
         }
 int MAXA = *max_element(a.begin(), a.end()) + 1;
         for (int x = MAXA - 1; x >= 1; x--) {
