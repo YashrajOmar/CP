@@ -1,3 +1,5 @@
+ binary indexed tree(BIT)
+
 
 
 #include <bits/stdc++.h>
